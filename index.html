@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Md. Arif Billah Chowdhury — Sales & Marketing Expert, Relationship Banker & Business Strategist with 6+ years of experience in financial operations, CRM and client development.">
+    <meta name="keywords" content="Arif Billah, Sales Executive, Marketing, CRM, Bangladesh, Finance, Relationship Officer, Business Strategist">
+    <meta name="author" content="Md. Arif Billah Chowdhury">
+    <meta property="og:title" content="Arif Billah Chowdhury | Business & Sales Professional">
+    <meta property="og:description" content="6+ years driving sales growth and client relationships across banking and retail.">
+    <title>Arif Billah Chowdhury | Business & Sales Professional</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-logo">
+            <span class="logo-icon">A</span>
+            <span class="logo-name">rif<span class="logo-dot">.</span></span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+            <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+
+        <a href="portfolio_context/Arif CV.pdf" download class="nav-cta">
+            <i class="fas fa-download"></i> <span data-i18n="nav.cv">Download CV</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <!-- Mobile Lang Toggle -->
+        <div class="mob-lang-toggle">
+            <button class="mob-lang-btn active" id="mobLangEN" onclick="setLang('en')">🇬🇧 English</button>
+            <button class="mob-lang-btn" id="mobLangBN" onclick="setLang('bn')">🇧🇩 বাংলা</button>
+        </div>
+        <ul class="mobile-links">
+            <li><a href="#home" class="mob-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" class="mob-link" data-i18n="nav.about">About</a></li>
+            <li><a href="#skills" class="mob-link" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#experience" class="mob-link" data-i18n="nav.experience">Experience</a></li>
+            <li><a href="#education" class="mob-link" data-i18n="nav.education">Education</a></li>
+            <li><a href="#contact" class="mob-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a href="portfolio_context/Arif CV.pdf" download class="mob-cta">
+            <i class="fas fa-download"></i> <span data-i18n="nav.cv">Download CV</span>
+        </a>
+    </div>
+
+    <main>
+        <!-- ===== HERO SECTION ===== -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <div class="status-badge reveal-up">
+                        <span class="status-pulse"></span>
+                        <span>Available for New Opportunities</span>
+                    </div>
+
+                    <h1 class="hero-name reveal-up" style="--d:0.1s">
+                        Md. Arif<br>
+                        <span class="text-gradient">Billah Chowdhury</span>
+                    </h1>
+
+                    <div class="hero-role reveal-up" style="--d:0.2s">
+                        <span class="role-prefix">I'm a </span>
+                        <span class="typed-text" id="typedText"></span>
+                        <span class="typed-cursor">|</span>
+                    </div>
+
+                    <p class="hero-bio reveal-up" style="--d:0.3s">
+                        A results-driven business professional with <strong>6+ years of experience</strong> blending financial acumen with powerful client relationships. I specialize in driving <strong>sales growth</strong>, expanding customer bases, and delivering premium banking & retail experiences across Bangladesh.
+                    </p>
+
+                    <div class="hero-stats reveal-up" style="--d:0.35s">
+                        <div class="hstat">
+                            <span class="hstat-num" data-count="6"></span>
+                            <p data-i18n="hero.stat1">Years Experience</p>
+                        </div>
+                        <div class="hstat-divider"></div>
+                        <div class="hstat">
+                            <span class="hstat-num" data-count="3"></span>
+                            <p data-i18n="hero.stat2">Companies</p>
+                        </div>
+                        <div class="hstat-divider"></div>
+                        <div class="hstat">
+                            <span class="hstat-num" data-count="500"></span>
+                            <p data-i18n="hero.stat3">Clients Served</p>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions reveal-up" style="--d:0.4s">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> <span data-i18n="hero.btn1">Let's Connect</span>
+                        </a>
+                        <a href="#experience" class="btn btn-ghost">
+                            <i class="fas fa-briefcase"></i> <span data-i18n="hero.btn2">View Work</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials reveal-up" style="--d:0.5s">
+                        <a href="mailto:billaharif1992@gmail.com" class="social-pill" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+8801903382400" class="social-pill" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-pill" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/8801903382400" target="_blank" class="social-pill" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-right reveal-scale" style="--d:0.15s">
+                    <div class="photo-frame">
+                        <div class="photo-glow"></div>
+                        <img src="portfolio_context/IMG-20260303-WA0002.jpg" alt="Md. Arif Billah Chowdhury" class="hero-photo" id="heroPhoto">
+
+                        <!-- Floating badges -->
+                        <div class="float-badge badge-top">
+                            <i class="fas fa-trophy"></i>
+                            <div>
+                                <strong>Top Performer</strong>
+                                <small>Padma Bank</small>
+                            </div>
+                        </div>
+                        <div class="float-badge badge-bottom">
+                            <i class="fas fa-handshake"></i>
+                            <div>
+                                <strong>CRM Expert</strong>
+                                <small>95% Proficiency</small>
+                            </div>
+                        </div>
+                        <div class="float-badge badge-left">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <strong>Sales Pro</strong>
+                                <small>90% Strategy</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location & Contact Quick Info -->
+                    <div class="quick-info">
+                        <div class="qi-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-i18n="hero.loc">Joypurhat, Bangladesh</span>
+                        </div>
+                        <div class="qi-item">
+                            <i class="fas fa-language"></i>
+                            <span data-i18n="hero.lang">Bengali · English</span>
+                        </div>
+                        <div class="qi-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-i18n="hero.avail">Available Now</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-hint">
+                <div class="scroll-dot"></div>
+                <span>Scroll Down</span>
+            </div>
+        </section>
+
+        <!-- ===== VALUE PROPOSITIONS ===== -->
+        <section class="values-section">
+            <div class="container">
+                <div class="values-grid">
+                    <div class="val-card reveal-up" style="--d:0s">
+                        <div class="val-icon"><i class="fas fa-users"></i></div>
+                        <h3><span data-i18n="val.title1">Client-Centric</span></h3>
+                        <p data-i18n="val.desc1">Building lasting relationships through trust, empathy, and consistent delivery of exceptional service across every touchpoint.</p>
+                    </div>
+                    <div class="val-card reveal-up" style="--d:0.1s">
+                        <div class="val-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3><span data-i18n="val.title2">Revenue Driven</span></h3>
+                        <p data-i18n="val.desc2">Proven track record in expanding market share, growing client portfolios, and achieving consistent sales targets in competitive environments.</p>
+                    </div>
+                    <div class="val-card reveal-up" style="--d:0.2s">
+                        <div class="val-icon"><i class="fas fa-brain"></i></div>
+                        <h3><span data-i18n="val.title3">Strategic Thinker</span></h3>
+                        <p data-i18n="val.desc3">Combining financial literacy with marketing strategy to identify opportunities, assess risks, and deliver measurable business value.</p>
+                    </div>
+                    <div class="val-card reveal-up" style="--d:0.3s">
+                        <div class="val-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h3><span data-i18n="val.title4">Adaptable</span></h3>
+                        <p data-i18n="val.desc4">Thriving in fast-paced, cross-functional teams across banking, retail, and fashion industries — from accounts to frontline sales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="about-section section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">Who I Am</span>
+                    <h2>About <span class="text-gradient">Me</span></h2>
+                    <p>A passionate professional who believes in continuous growth, collaboration, and creating real impact.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text reveal-up">
+                        <p class="lead-text">
+                            I'm <strong>Md. Arif Billah Chowdhury</strong>, born in 1992 and based in Joypurhat, Bangladesh. My career spans over 6 years across diverse industries — from <em>financial fashion</em> to <em>retail footwear</em> to <em>premium banking</em>.
+                        </p>
+                        <p>
+                            My journey began in accounts and finance at The Delta Quality Fashions, where I developed a solid foundation in financial operations. This hands-on experience with numbers gave me a unique edge when I transitioned into sales and marketing — I understood profitability, margins, and business viability in ways most sales professionals don't.
+                        </p>
+                        <p>
+                            At HDF Footwear Nabik Ltd, I transformed that financial knowledge into sales performance — closing deals, presenting to clients, collecting orders, and nurturing long-term relationships over 3+ years. Finally, at Padma Bank PLC, I brought both skill sets together as an Associate Relationship Officer — delivering premium banking experiences while expanding and retaining the bank's client base.
+                        </p>
+                        <p>
+                            My core philosophy? <em>"Learning never stops — from people, cultures, and every new experience."</em> I believe the best professionals are those who stay curious, stay hungry, and always put the client first.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div class="ah-item">
+                                <i class="fas fa-star"></i>
+                                <span>BBA (Finance) Graduate — University of Development Alternative</span>
+                            </div>
+                            <div class="ah-item">
+                                <i class="fas fa-star"></i>
+                                <span>Experienced in Banking, Retail & Fashion Industries</span>
+                            </div>
+                            <div class="ah-item">
+                                <i class="fas fa-star"></i>
+                                <span>Strong communicator in Bengali & English</span>
+                            </div>
+                            <div class="ah-item">
+                                <i class="fas fa-star"></i>
+                                <span>Proven ability to manage teams, accounts & client portfolios</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cards reveal-scale" style="--d:0.1s">
+                        <div class="info-card ic-primary">
+                            <div class="ic-icon"><i class="fas fa-user-tie"></i></div>
+                            <h4>Personal Info</h4>
+                            <ul class="info-list">
+                                <li><i class="fas fa-birthday-cake"></i><span>Born 07 May 1992, Kurigram</span></li>
+                                <li><i class="fas fa-map-marker-alt"></i><span>Jobbar Mondal Para, Joypurhat-5900</span></li>
+                                <li><i class="fas fa-envelope"></i><span>billaharif1992@gmail.com</span></li>
+                                <li><i class="fas fa-phone"></i><span>+880 1903-382400 (Mobile)</span></li>
+                                <li><i class="fas fa-phone-alt"></i><span>+880 1798-790110 (Home)</span></li>
+                                <li><i class="fas fa-passport"></i><span>Passport: A10952284</span></li>
+                                <li><i class="fas fa-language"></i><span>Bengali (Native) · English (Professional)</span></li>
+                                <li><i class="fas fa-flag"></i><span>Bangladeshi · Muslim · Married</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card ic-accent">
+                            <div class="ic-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h4>Education</h4>
+                            <ul class="info-list">
+                                <li><i class="fas fa-university"></i><span>BBA — Finance, Banking &amp; Insurance</span></li>
+                                <li><i class="fas fa-school"></i><span>University of Development Alternative (UODA)</span></li>
+                                <li><i class="fas fa-map-marker-alt"></i><span>Dhaka, Bangladesh</span></li>
+                                <li><i class="fas fa-calendar"></i><span>2011 – 2017</span></li>
+                                <li><i class="fas fa-award"></i><span>EQF Level 6 Qualification</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="availability-card">
+                            <div class="avail-glow"></div>
+                            <div class="avail-icon"><i class="fas fa-briefcase"></i></div>
+                            <h4>Looking For</h4>
+                            <p>Relationship Banking, Sales Management, Business Development, or Senior Finance roles where I can leverage my 15+ years of experience to lead teams and drive measurable growth.</p>
+                            <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="skills-section section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-tag">My Expertise</span>
+                    <h2>Skills & <span class="text-gradient">Capabilities</span></h2>
+                    <p>A powerful combination of soft skills, financial expertise, and modern business tools.</p>
+                </div>
+
+                <div class="skills-layout">
+                    <!-- Core Competencies -->
+                    <div class="skills-col reveal-up">
+                        <h3 class="skills-col-title"><i class="fas fa-star"></i> Core Competencies</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-label">
+                                    <span>CRM & Client Relationship Management</span>
+                                    <span class="skill-pct">95%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-w="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-label">
+                                    <span>Sales Strategy & Target Achievement</span>
+                                    <span class="skill-pct">90%</span>
+                                </div>
+                                <div class="skill-track">
+                                    <div class="skill-fill" data-w="90"></div>
+                                </div>
+                            </div>
+                
